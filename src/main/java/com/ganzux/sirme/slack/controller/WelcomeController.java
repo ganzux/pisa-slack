@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
+    StringBuilder sb = new StringBuilder("Hello World");
+
     @GetMapping("/")
     public String welcome() {
-        return "Hello World!";
+        sb.append("!");
+        return sb.toString();
     }
 
 }
