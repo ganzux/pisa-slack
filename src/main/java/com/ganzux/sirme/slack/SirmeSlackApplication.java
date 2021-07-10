@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableScheduling
+@EnableTransactionManagement
 public class SirmeSlackApplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SirmeSlackApplication.class.getCanonicalName());
