@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -35,8 +34,8 @@ public class SlackAppInitializer {
         return AppConfig.builder().build();
     }
 
-    @Value("${splunk.token}")
-    String SPLUNK_TOKEN;
+    @Value("${slack.token}")
+    String SLACK_TOKEN;
 
     @Bean
     public AppConfig loadAppConfig() {
@@ -53,12 +52,12 @@ public class SlackAppInitializer {
             config.setClientId("2224011135479.2262426042608");
             config.setClientSecret("e10464249db633b8c935056260eb507c");
 
-            config.setSingleTeamBotToken(SPLUNK_TOKEN);
+            config.setSingleTeamBotToken(SLACK_TOKEN);
 
 
         } catch (Exception e) {
-            config.setSingleTeamBotToken(SPLUNK_TOKEN);
-            LOGGER.error("Error initializing Bean Slack App, check token is null ?", SPLUNK_TOKEN == null, e);
+            config.setSingleTeamBotToken(SLACK_TOKEN);
+            LOGGER.error("Error initializing Bean Slack App, check token is null ?", SLACK_TOKEN == null, e);
         }
         return config;
     }
@@ -80,7 +79,7 @@ public class SlackAppInitializer {
         ChatPostMessageRequest request = ChatPostMessageRequest.builder()
                 .channel("#general") // Use a channel ID `C1234567` is preferrable
                 .text(":wave: Hi there from a bot written in Java!")
-                .token(SPLUNK_TOKEN)
+                .token(SLACK_TOKEN)
                 .build();
 
         app.client().chatPostMessage(request);
