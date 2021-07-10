@@ -28,12 +28,6 @@ public class SlackAppInitializer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SlackAppInitializer.class.getCanonicalName());
 
-
-    //    @Bean
-    public AppConfig loadDefaultConfig() {
-        return AppConfig.builder().build();
-    }
-
     @Value("${slack.token}")
     String SLACK_TOKEN;
 
@@ -70,7 +64,11 @@ public class SlackAppInitializer {
                 .build();
 
         LOGGER.info("chatPostMessage");
-        app.client().chatPostMessage(request);
+        try {
+            app.client().chatPostMessage(request);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         LOGGER.info("chatPostMessage done");
         return app;
     }
