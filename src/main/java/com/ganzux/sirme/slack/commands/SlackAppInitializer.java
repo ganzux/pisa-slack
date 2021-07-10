@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.validation.Valid;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -31,15 +32,15 @@ public class SlackAppInitializer {
     @Value("${slack.token}")
     String SLACK_TOKEN;
 
+    @Value("${slack.secret}")
+    String SLACK_SECRET;
+
     @Bean
     public AppConfig loadAppConfig() {
 
         AppConfig config = new AppConfig();
-
         config.setSingleTeamBotToken(SLACK_TOKEN);
-        config.setClientId("2224011135479.2262426042608");
-        config.setClientSecret("e10464249db633b8c935056260eb507c");
-
+        config.setSigningSecret(SLACK_SECRET);
         return config;
     }
 
@@ -58,18 +59,13 @@ public class SlackAppInitializer {
 
 
         ChatPostMessageRequest request = ChatPostMessageRequest.builder()
-                .channel("#general") // Use a channel ID `C1234567` is preferrable
-                .text(":wave: Hi there from a bot written in Java!")
+                .channel("#general")
+                .text(":dizzy: SIRME App started! Feel free to ask me")
                 .token(SLACK_TOKEN)
                 .build();
 
-        LOGGER.info("chatPostMessage");
-        try {
-            app.client().chatPostMessage(request);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        LOGGER.info("chatPostMessage done");
+        app.client().chatPostMessage(request);
+
         return app;
     }
 
