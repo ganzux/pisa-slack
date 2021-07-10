@@ -41,24 +41,11 @@ public class SlackAppInitializer {
     public AppConfig loadAppConfig() {
 
         AppConfig config = new AppConfig();
-        ClassLoader classLoader = SlackAppInitializer.class.getClassLoader();
 
-        try (InputStream is = classLoader.getResourceAsStream("appConfig.json");
-             InputStreamReader isr = new InputStreamReader(is)) {
-            String json = new BufferedReader(isr).lines().collect(joining());
-            JsonObject j = new Gson().fromJson(json, JsonElement.class).getAsJsonObject();
-            config.setSigningSecret(j.get("signingSecret").getAsString());
-            config.setSingleTeamBotToken(j.get("singleTeamBotToken").getAsString());
-            config.setClientId("2224011135479.2262426042608");
-            config.setClientSecret("e10464249db633b8c935056260eb507c");
+        config.setSingleTeamBotToken(SLACK_TOKEN);
+        config.setClientId("2224011135479.2262426042608");
+        config.setClientSecret("e10464249db633b8c935056260eb507c");
 
-            config.setSingleTeamBotToken(SLACK_TOKEN);
-
-
-        } catch (Exception e) {
-            config.setSingleTeamBotToken(SLACK_TOKEN);
-            LOGGER.error("Error initializing Bean Slack App, check token is null ?", SLACK_TOKEN == null, e);
-        }
         return config;
     }
 
@@ -82,8 +69,9 @@ public class SlackAppInitializer {
                 .token(SLACK_TOKEN)
                 .build();
 
+        LOGGER.info("chatPostMessage");
         app.client().chatPostMessage(request);
-
+        LOGGER.info("chatPostMessage done");
         return app;
     }
 
