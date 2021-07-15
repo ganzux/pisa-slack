@@ -31,7 +31,7 @@ INSERT INTO users (id, user_id, first_name, last_name, career, manager) VALUES
     (1, 'adangote', 'Aliko', 'Dangote', 'CEO', 1),
     (2, 'billy', 'Bill', 'Gates', 'CTO', 1),
     (3, 'falakija', 'Folrunsho', 'Alakija', 'Manager', 2),
-    (4, 'alvaro', 'Alvaro', 'Alcedo Moreno', 'Architect', 3);
+    (4, 'U027DBHAVHP', 'Alvaro', 'Alcedo Moreno', 'Architect', 3);
 
 INSERT INTO projects (id, project_id, project_name, project_description) VALUES
     (1, 'PING', 'Ping', 'Ping microservice'),
@@ -45,4 +45,7 @@ INSERT INTO timesheets (project_id, user_id, date_from, date_to, duration_min) V
     (2, 1, TO_DATE('2021/07/16', 'YYYY/MM/DD'), TO_DATE('2021/07/16', 'YYYY/MM/DD'), 480),
     (1, 2, TO_DATE('2021/07/12', 'YYYY/MM/DD'), TO_DATE('2021/07/16', 'YYYY/MM/DD'), 2400),
     (3, 3, TO_DATE('2021/07/12', 'YYYY/MM/DD'), TO_DATE('2021/07/16', 'YYYY/MM/DD'), 2400),
-    (3, 4, TO_DATE('2021/07/12', 'YYYY/MM/DD'), TO_DATE('2021/07/16', 'YYYY/MM/DD'), 2400);
+    (1, 4, TO_DATE('2021/07/05', 'YYYY/MM/DD'), TO_DATE('2021/07/05', 'YYYY/MM/DD'), 480),
+    (2, 4, TO_DATE('2021/07/06', 'YYYY/MM/DD'), TO_DATE('2021/07/06', 'YYYY/MM/DD'), 480),
+    (3, 4, TO_DATE('2021/07/07', 'YYYY/MM/DD'), TO_DATE('2021/07/09', 'YYYY/MM/DD'), 1440),
+    (2, 4, TO_DATE('2021/07/12', 'YYYY/MM/DD'), TO_DATE('2021/07/13', 'YYYY/MM/DD'), 960);
