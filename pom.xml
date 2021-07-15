@@ -8,11 +8,11 @@
 		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ganzux.sirme.slack</groupId>
-	<artifactId>sirme-slack</artifactId>
+	<groupId>com.ganzux.pisa.slack</groupId>
+	<artifactId>pisa-slack</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sirme-slack</name>
-	<description>Connectivity of SIRME with SLACK</description>
+	<description>Personnel Integration Slack Application</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<slack-version>1.8.1</slack-version>
