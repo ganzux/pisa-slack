@@ -1,9 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][https://github.com/ganzux/pisa-slack/graphs/contributors]
+[![Forks][forks-shield]][https://github.com/ganzux/pisa-slack/network/members]
+[![Stargazers][stars-shield]][https://github.com/ganzux/pisa-slack/stargazers]
+[![Issues][issues-shield]][https://github.com/ganzux/pisa-slack/issues]
+[![MIT License][license-shield]][https://github.com/ganzux/pisa-slack/blob/master/LICENSE.txt]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alvaroam]
 
 
 <br />
