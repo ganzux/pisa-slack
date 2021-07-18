@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ganzux/pisa-slack">
-    <img src="docs/logo.png" alt="Logo" width="80" height="80">
+    <img src="docs/logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">PISA</h3>
@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![PISA Screen Shot][product-screenshot]](docs/screen.png)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
