@@ -2,6 +2,7 @@ package com.ganzux.pisa.slack.controller;
 
 import com.ganzux.pisa.slack.persistance.service.ProjectService;
 import com.ganzux.pisa.slack.persistance.service.TimesheetService;
+import com.ganzux.pisa.slack.util.Constants;
 import com.ganzux.pisa.slack.views.HomePage;
 import com.ganzux.pisa.slack.views.ViewsHelper;
 import com.google.gson.internal.LinkedTreeMap;
@@ -49,7 +50,7 @@ public class MySlackAppController extends SlackAppServlet {
             return ctx.ack();
         });
 
-        app.blockAction("copyLastTs", (req, ctx) -> {
+        app.blockAction(Constants.VIEW_TS_INPUT_SAVE, (req, ctx) -> {
 
             LinkedTreeMap projectMap = (LinkedTreeMap)req.getPayload().getView().getState().getValues().get("project-block");
             LinkedTreeMap minutesMap = (LinkedTreeMap)req.getPayload().getView().getState().getValues().get("minutes-block");
@@ -57,11 +58,11 @@ public class MySlackAppController extends SlackAppServlet {
             LinkedTreeMap dateFromMap = (LinkedTreeMap)req.getPayload().getView().getState().getValues().get("minutes-blockF");
             LinkedTreeMap dateToMap = (LinkedTreeMap)req.getPayload().getView().getState().getValues().get("minutes-blockT");
 
-            String projectId = ((ViewState.Value) projectMap.get("project-selection-action")).getSelectedOption().getValue();
-            String minutes = ((ViewState.Value) minutesMap.get("minutes-input-action")).getValue();
-            String comments = ((ViewState.Value) commentsMap.get("comments-input-action")).getValue();
-            String dateFrom = ((ViewState.Value) dateFromMap.get("date-worked-from")).getSelectedDate();
-            String dateTo = ((ViewState.Value) dateToMap.get("date-worked-to")).getSelectedDate();
+            String projectId = ((ViewState.Value) projectMap.get(Constants.VIEW_TS_INPUT_PROJECT)).getSelectedOption().getValue();
+            String minutes = ((ViewState.Value) minutesMap.get(Constants.VIEW_TS_INPUT_MINUTES)).getValue();
+            String comments = ((ViewState.Value) commentsMap.get(Constants.VIEW_TS_INPUT_COMMENTS)).getValue();
+            String dateFrom = ((ViewState.Value) dateFromMap.get(Constants.VIEW_TS_INPUT_DATE_FROM)).getSelectedDate();
+            String dateTo = ((ViewState.Value) dateToMap.get(Constants.VIEW_TS_INPUT_DATE_TO)).getSelectedDate();
             String userId = ctx.getRequestUserId();
 
             timesheetService.save(userId, projectId, minutes, comments, dateFrom, dateTo);
@@ -69,11 +70,11 @@ public class MySlackAppController extends SlackAppServlet {
             return ctx.ack();
         });
 
-        app.blockAction("modalLastTs", (req, ctx) -> {
+        app.blockAction(Constants.VIEW_MODAL_LAST_TIMESHEET, (req, ctx) -> {
             return viewsHelper.openMoreInfoModal(ctx, true);
         });
 
-        app.blockAction("modalThisTs", (req, ctx) -> {
+        app.blockAction(Constants.VIEW_MODAL_THIS_TIMESHEET, (req, ctx) -> {
             return viewsHelper.openMoreInfoModal(ctx, false);
         });
 
@@ -92,7 +93,7 @@ public class MySlackAppController extends SlackAppServlet {
             return ctx.ack(req.getResponseUrl());
         });
 
-        app.blockAction("project-selection-action", (req, ctx) -> {
+        app.blockAction(Constants.VIEW_TS_INPUT_PROJECT, (req, ctx) -> {
             // Do something where
             return ctx.ack();
         });

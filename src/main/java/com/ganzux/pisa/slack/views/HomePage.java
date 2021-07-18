@@ -4,6 +4,7 @@ import com.ganzux.pisa.slack.persistance.dto.UserDto;
 import com.ganzux.pisa.slack.persistance.service.ProjectService;
 import com.ganzux.pisa.slack.persistance.service.TimesheetService;
 import com.ganzux.pisa.slack.persistance.service.UserService;
+import com.ganzux.pisa.slack.util.Constants;
 import com.ganzux.pisa.slack.util.TimeUtil;
 import com.slack.api.app_backend.events.payload.EventsApiPayload;
 import com.slack.api.model.event.AppHomeOpenedEvent;
@@ -60,12 +61,12 @@ public class HomePage {
 
                         section(section -> section
                                 .text(markdownText(generateLastWeekSummary(user.getUserId())))
-                                .accessory(button(b -> b.text(plainText(pt -> pt.text("See last week report"))).value("last_timesheets").actionId("modalLastTs"))
+                                .accessory(button(b -> b.text(plainText(pt -> pt.text("See last week report"))).value("last_timesheets").actionId(Constants.VIEW_MODAL_LAST_TIMESHEET))
                                 )
                         ),
                         section(section -> section
                                 .text(markdownText(generateThisWeekSummary(user.getUserId())))
-                                .accessory(button(b -> b.text(plainText(pt -> pt.text("See this week report"))).value("this_timesheets").actionId("modalThisTs"))
+                                .accessory(button(b -> b.text(plainText(pt -> pt.text("See this week report"))).value("this_timesheets").actionId(Constants.VIEW_MODAL_THIS_TIMESHEET))
                                 )
                         ),
 
@@ -75,7 +76,7 @@ public class HomePage {
                                 .blockId("project-block")
                                 .text(markdownText("Select the Project you have been working in"))
                                 .accessory(staticSelect(staticSelect -> staticSelect
-                                        .actionId("project-selection-action")
+                                        .actionId(Constants.VIEW_TS_INPUT_PROJECT)
                                         .placeholder(plainText("Select a project"))
                                         .options(asOptions(viewsHelper.generateProjectList()
                                         ))
@@ -86,7 +87,7 @@ public class HomePage {
                                 .blockId("minutes-blockF")
                                 .label(plainText("Date worked From"))
                                 .element(datePicker(d -> d
-                                        .actionId("date-worked-from")
+                                        .actionId(Constants.VIEW_TS_INPUT_DATE_FROM)
                                        // .initialDate(timeUtil.weekInit())
                                 ))
                         ),
@@ -95,7 +96,7 @@ public class HomePage {
                                 .blockId("minutes-blockT")
                                 .label(plainText(pt -> pt.text(("Date worked To"))))
                                 .element(datePicker(d -> d
-                                        .actionId("date-worked-to")
+                                        .actionId(Constants.VIEW_TS_INPUT_DATE_TO)
                                         //.initialDate(timeUtil.weekEnd())
                                 ))
                         ),
@@ -103,7 +104,7 @@ public class HomePage {
                         input(input -> input
                                 .blockId("minutes-block")
                                 .element(plainTextInput(pti -> pti
-                                        .actionId("minutes-input-action")
+                                        .actionId(Constants.VIEW_TS_INPUT_MINUTES)
                                         .multiline(false)
                                         .maxLength(5)
                                         .minLength(1)
@@ -115,7 +116,7 @@ public class HomePage {
                         input(input -> input
                                 .blockId("comments-block")
                                 .element(plainTextInput(pti -> pti
-                                        .actionId("comments-input-action")
+                                        .actionId(Constants.VIEW_TS_INPUT_COMMENTS)
                                         .multiline(true)
                                         .maxLength(300)
                                         .minLength(0)
@@ -126,7 +127,7 @@ public class HomePage {
                         divider(),
                         actions(actions -> actions
                                 .elements(asElements(
-                                        button(b -> b.text(plainText(pt -> pt.text("Add Timesheet"))).value("button1").actionId("copyLastTs"))
+                                        button(b -> b.text(plainText(pt -> pt.text("Add Timesheet"))).value("button1").actionId(Constants.VIEW_TS_INPUT_SAVE))
                                 ))
                         )
                 ))
