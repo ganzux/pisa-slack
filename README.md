@@ -2,8 +2,15 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Commit Activity][git-activity-shield]][git-activity-url]
+[![Last Commit][git-commit-shield]][git-commit-url]
 [![MIT License][license-shield]][license-url]
+[![Heroku][heroku-shield]][heroku-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+ganzux/pisa-slack
 
 <br />
 <p align="center">
@@ -181,9 +188,14 @@ Project Link: [https://github.com/ganzux/pisa-slack](https://github.com/ganzux/p
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alvaroam
 
+[heroku-shield]: https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg?style=for-the-badge
+[heroku-url]: https://sirme-slack.herokuapp.com/
 
+[git-activity-shield]: https://img.shields.io/github/commit-activity/y/ganzux/pisa-slack?style=for-the-badge
+[git-activity-url]: https://github.com/ganzux/pisa-slack/branches
 
-
+[git-commit-shield]: https://img.shields.io/github/last-commit/ganzux/pisa-slack?style=for-the-badge
+[git-commit-url]: https://github.com/ganzux/pisa-slack/commits/master
 
 
 
