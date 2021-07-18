@@ -60,20 +60,34 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![PISA Screen Shot][product-screenshot]](docs/screen.png)
+PISA is your personnal assistant for HR interactions within SLACK!
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`ganzux`, `pisa-slack`, `ganzux`, `email`, `PISA`, `project_description`
+![PISA Screen Shot](docs/screen.png)
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [Java]()
+* [SpringBoot]()
+* [Slack]()
+* [Slack Bolt]()
+* [ngrock]()
+* [Heroku]()
 
 
+1. Java
+2. SpringBoot
+3. Slack
+4. Slack Bolt: a foundational framework for Slack apps
+5. ngrock  (./ngrok http 3000)
+6. Heroku
+
+### TODO List
+
+1. Decouple into a Data microservice and a services microservice
+2. Introduce Mappers for DTO/Data Objects
+3. Flyway for migrations in DB
+4. 
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -146,32 +160,22 @@ Project Link: [https://github.com/ganzux/pisa-slack](https://github.com/ganzux/p
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ganzux/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ganzux/pisa-slack?style=for-the-badge
 [contributors-url]: https://github.com/ganzux/pisa-slack/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/ganzux/repo.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/ganzux/pisa-slack?style=for-the-badge
 [forks-url]: https://github.com/ganzux/pisa-slack/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/ganzux/repo.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/ganzux/pisa-slack?style=for-the-badge
 [stars-url]: https://github.com/ganzux/pisa-slack/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/ganzux/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ganzux/pisa-slack?style=for-the-badge
 [issues-url]: https://github.com/ganzux/pisa-slack/issues
 
-[license-shield]: https://img.shields.io/github/license/ganzux/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ganzux/pisa-slack?style=for-the-badge
 [license-url]: https://github.com/ganzux/pisa-slack/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
@@ -183,24 +187,3 @@ Project Link: [https://github.com/ganzux/pisa-slack](https://github.com/ganzux/p
 
 
 
-
-ttps://sirme-slack.herokuapp.com/mainframe/ts/alvaro
-https://sirme-slack.herokuapp.com/mainframe/projects
-https://sirme-slack.herokuapp.com/mainframe/user/alvaro
-
-
-Technologies:
-1. Java
-2. SpringBoot
-3. Slack
-4. Slack Bolt: a foundational framework for Slack apps
-5. ngrock  (./ngrok http 3000)
-6. Heroku
-
-
-
-TODO List:
-1. Decouple into a Data microservice and a services microservice
-2. Introduce Mappers for DTO/Data Objects
-3. Flyway for migrations in DB
-4. 
