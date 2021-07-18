@@ -1,10 +1,9 @@
-[![Contributors][contributors-shield]][https://github.com/ganzux/pisa-slack/graphs/contributors]
-[![Forks][forks-shield]][https://github.com/ganzux/pisa-slack/network/members]
-[![Stargazers][stars-shield]][https://github.com/ganzux/pisa-slack/stargazers]
-[![Issues][issues-shield]][https://github.com/ganzux/pisa-slack/issues]
-[![MIT License][license-shield]][https://github.com/ganzux/pisa-slack/blob/master/LICENSE.txt]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alvaroam]
-
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
 <p align="center">
@@ -161,24 +160,22 @@ Project Link: [https://github.com/ganzux/pisa-slack](https://github.com/ganzux/p
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/ganzux/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/ganzux/repo/graphs/contributors
+[contributors-url]: https://github.com/ganzux/pisa-slack/graphs/contributors
+
 [forks-shield]: https://img.shields.io/github/forks/ganzux/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/ganzux/repo/network/members
+[forks-url]: https://github.com/ganzux/pisa-slack/network/members
+
 [stars-shield]: https://img.shields.io/github/stars/ganzux/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/ganzux/repo/stargazers
+[stars-url]: https://github.com/ganzux/pisa-slack/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/ganzux/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/ganzux/repo/issues
+[issues-url]: https://github.com/ganzux/pisa-slack/issues
+
 [license-shield]: https://img.shields.io/github/license/ganzux/repo.svg?style=for-the-badge
-[license-url]: https://github.com/ganzux/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/ganzux/pisa-slack/blob/master/LICENSE.txt
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ganzux
-
-
-
-
-
-
-
+[linkedin-url]: https://www.linkedin.com/in/alvaroam
 
 
 
