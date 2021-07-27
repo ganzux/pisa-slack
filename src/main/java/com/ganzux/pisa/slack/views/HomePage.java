@@ -73,7 +73,7 @@ public class HomePage {
                         divider(),
 
                         section(section -> section
-                                .blockId("project-block")
+                                .blockId(Constants.VIEW_BLOCK_INPUT_PROJECT)
                                 .text(markdownText("Select the Project you have been working in"))
                                 .accessory(staticSelect(staticSelect -> staticSelect
                                         .actionId(Constants.VIEW_TS_INPUT_PROJECT)
@@ -84,7 +84,7 @@ public class HomePage {
                         ),
 
                         input(section -> section
-                                .blockId("minutes-blockF")
+                                .blockId(Constants.VIEW_BLOCK_INPUT_DATE_FROM)
                                 .label(plainText("Date worked From"))
                                 .element(datePicker(d -> d
                                         .actionId(Constants.VIEW_TS_INPUT_DATE_FROM)
@@ -93,7 +93,7 @@ public class HomePage {
                         ),
 
                         input(section -> section
-                                .blockId("minutes-blockT")
+                                .blockId(Constants.VIEW_BLOCK_INPUT_DATE_TO)
                                 .label(plainText(pt -> pt.text(("Date worked To"))))
                                 .element(datePicker(d -> d
                                         .actionId(Constants.VIEW_TS_INPUT_DATE_TO)
@@ -102,7 +102,7 @@ public class HomePage {
                         ),
 
                         input(input -> input
-                                .blockId("minutes-block")
+                                .blockId(Constants.VIEW_BLOCK_INPUT_MINUTES)
                                 .element(plainTextInput(pti -> pti
                                         .actionId(Constants.VIEW_TS_INPUT_MINUTES)
                                         .multiline(false)
@@ -114,7 +114,7 @@ public class HomePage {
                         ),
 
                         input(input -> input
-                                .blockId("comments-block")
+                                .blockId(Constants.VIEW_BLOCK_INPUT_COMMENTS)
                                 .element(plainTextInput(pti -> pti
                                         .actionId(Constants.VIEW_TS_INPUT_COMMENTS)
                                         .multiline(true)

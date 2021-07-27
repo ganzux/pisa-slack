@@ -114,16 +114,33 @@ public class ViewsHelper {
         sb.append(" week Timesheet");
 
         return view(view -> view
-            .callbackId("see-last-timesheet" + lastWeek)
-            .type("modal")
-            .notifyOnClose(true)
-            .title(viewTitle(title -> title.type("plain_text").text(sb.toString()).emoji(true)))
+                .callbackId("see-last-timesheet" + lastWeek)
+                .type("modal")
+                .notifyOnClose(true)
+                .title(viewTitle(title -> title.type("plain_text").text(sb.toString()).emoji(true)))
 
-            .blocks(
-                asBlocks(
-                    getLastTimeSheetsFormatted(userId, lastWeek)
+                .blocks(
+                        asBlocks(
+                                getLastTimeSheetsFormatted(userId, lastWeek)
+                        )
                 )
-            )
+        );
+    }
+
+    public View buildModalWithMessage(String message, boolean error) {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(message);
+
+        return view(view -> view
+                .callbackId("info-modal")
+                .type("modal")
+                .notifyOnClose(true)
+                .title(viewTitle(title -> title.type("plain_text").text(error? "Error!" : "Operation result").emoji(true)))
+
+                .blocks(
+                        asBlocks(section(section -> section.text(markdownText(message))))
+                )
         );
     }
 
@@ -131,6 +148,18 @@ public class ViewsHelper {
         ViewsOpenResponse viewsOpenRes = ctx.client().viewsOpen(r -> r
                 .triggerId(ctx.getTriggerId())
                 .view(buildModalLastSpreadSheets(ctx.getRequestUserId(), lastWeek)));
+        if (viewsOpenRes.isOk()) {
+            return ctx.ack();
+        }
+        else {
+            return Response.builder().statusCode(500).body(viewsOpenRes.getError()).build();
+        }
+    }
+
+    public Response openAckModal(ActionContext ctx, String text, boolean isError) throws IOException, SlackApiException {
+        ViewsOpenResponse viewsOpenRes = ctx.client().viewsOpen(r -> r
+                .triggerId(ctx.getTriggerId())
+                .view(buildModalWithMessage(text, isError)));
         if (viewsOpenRes.isOk()) {
             return ctx.ack();
         }
@@ -174,7 +203,7 @@ public class ViewsHelper {
 
         String weekData = String.format("Project: *%s*\nHours: %s (%s to %s)\nComments: %s",
                 timeSheetDto.getProject().getProjectName(),
-                String.valueOf(timeSheetDto.getDuration() / 60),
+                (double)timeSheetDto.getDuration() / 60,
                 timeUtil.prettyDate(timeSheetDto.getTimeFrom()),
                 timeUtil.prettyDate(timeSheetDto.getTimeTo()),
                 null == timeSheetDto.getComments() ? "No comments" : timeSheetDto.getComments()
@@ -183,4 +212,7 @@ public class ViewsHelper {
         return weekData;
     }
 
+    public void cleanHomeScreen() {
+
+    }
 }

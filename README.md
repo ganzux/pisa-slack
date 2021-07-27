@@ -94,7 +94,7 @@ PISA is your personnal assistant for HR interactions within SLACK!
 1. Decouple into a Data microservice and a services microservice
 2. Introduce Mappers for DTO/Data Objects
 3. Flyway for migrations in DB
-4. 
+4. Default Dates in meain screen 
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -104,10 +104,9 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* maven
+* Java 1.8+
+* ngrok
 
 ### Installation
 
@@ -115,12 +114,22 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/ganzux/pisa-slack.git
    ```
-2. Install NPM packages
+2. Build the project
    ```sh
-   npm install
+   mvn package
    ```
-
-
+3. Start a ngrock instance
+   ```sh
+   ./ngrok http 3000
+   ```
+4. Point your SLACK app to the HTTPS url provided by ngrok
+   ```
+   https://17de9bbc1338.ngrok.io -> http://localhost:3000
+   ```
+5. Start your SpringBoot App in the port 3000
+    ```sh
+    mvn spring-boot:run 
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage

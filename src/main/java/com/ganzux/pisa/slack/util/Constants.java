@@ -17,4 +17,10 @@ public abstract class Constants {
     public static final String VIEW_TS_INPUT_COMMENTS = "comments-input-action";
     public static final String VIEW_TS_INPUT_SAVE = "save-ts-action";
 
+    public static final String VIEW_BLOCK_INPUT_PROJECT = "project-block";
+    public static final String VIEW_BLOCK_INPUT_MINUTES = "minutes-block";
+    public static final String VIEW_BLOCK_INPUT_COMMENTS = "comments-block";
+    public static final String VIEW_BLOCK_INPUT_DATE_FROM = "minutes-blockF";
+    public static final String VIEW_BLOCK_INPUT_DATE_TO = "minutes-blockT";
+
 }

@@ -99,7 +99,8 @@ public class TimesheetServiceImpl implements TimesheetService {
       t.setProject(p);
 
       t = timesheetRepository.save(t);
-      System.out.println(t.getId());
+
+      LOGGER.info("TS saved with id {} successfully!", t.getId());
     }
 
     return 0;
