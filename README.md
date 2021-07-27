@@ -26,7 +26,7 @@ ganzux/pisa-slack
     <a href="https://github.com/ganzux/pisa-slack"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ganzux/pisa-slack">View Demo</a>
+    <a href="https://sirme-slack.herokuapp.com/actuator/health">View Demo</a>
     ·
     <a href="https://github.com/ganzux/pisa-slack/issues">Report Bug</a>
     ·
@@ -44,6 +44,7 @@ ganzux/pisa-slack
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#todo-list">TODO List</a></li>
       </ul>
     </li>
     <li>
@@ -53,8 +54,6 @@ ganzux/pisa-slack
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -74,27 +73,24 @@ PISA is your personnal assistant for HR interactions within SLACK!
 
 ### Built With
 
-* [Java]()
-* [SpringBoot]()
-* [Slack]()
-* [Slack Bolt]()
-* [ngrock]()
-* [Heroku]()
+* [Java](https://en.wikipedia.org/wiki/Java_(programming_language))
+* [SpringBoot](https://spring.io/projects/spring-boot)
+* [Slack](https://www.slack.com/)
+* [Slack Bolt](https://slack.dev/java-slack-sdk/): a foundational framework for Slack apps
+* [ngrock](https://ngrok.com/): ngrok provides a real-time web UI where you can introspect all HTTP traffic running over your tunnels. Replay any request against your tunnel with one click.
+* [Heroku](https://id.heroku.com/login): Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
-
-1. Java
-2. SpringBoot
-3. Slack
-4. Slack Bolt: a foundational framework for Slack apps
-5. ngrock  (./ngrok http 3000)
-6. Heroku
 
 ### TODO List
 
 1. Decouple into a Data microservice and a services microservice
 2. Introduce Mappers for DTO/Data Objects
 3. Flyway for migrations in DB
-4. Default Dates in meain screen 
+4. Default Dates in main screen
+5. Refresh main screen after recording a TS
+6. Integrate with commands
+7. Default project - Last one used
+8.  
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -131,19 +127,11 @@ This is an example of how to list things you need to use the software and how to
     mvn spring-boot:run 
    ```
 
-<!-- USAGE EXAMPLES -->
-## Usage
+![Interactivity and shorcuts](docs/2021-07-27_16-29-33.png)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+![Events before](docs/2021-07-27_16-30-33.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/ganzux/pisa-slack/issues) for a list of proposed features (and known issues).
+![Events after](docs/2021-07-27_16-30-47.png)
 
 
 
@@ -205,6 +193,3 @@ Project Link: [https://github.com/ganzux/pisa-slack](https://github.com/ganzux/p
 
 [git-commit-shield]: https://img.shields.io/github/last-commit/ganzux/pisa-slack?style=for-the-badge
 [git-commit-url]: https://github.com/ganzux/pisa-slack/commits/master
-
-
-
