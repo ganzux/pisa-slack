@@ -73,7 +73,7 @@ PISA is your personnal assistant for HR interactions within SLACK!
 
 ### Built With
 
-* [Java](https://en.wikipedia.org/wiki/Java_(programming_language): Java is a high-level, class-based, object-oriented 
+* [Java](https://en.wikipedia.org/wiki/Java_(programming_language)): Java is a high-level, class-based, object-oriented 
 programming language that is designed to have as few implementation dependencies as possible.
 
 * [SpringBoot](https://spring.io/projects/spring-boot): Spring Boot makes it easy to create stand-alone, 
