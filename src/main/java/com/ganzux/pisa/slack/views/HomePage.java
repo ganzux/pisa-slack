@@ -137,7 +137,7 @@ public class HomePage {
     }
 
     protected String generateHeader() {
-        return ":disguised_face: *Multi Agent HR Information System* at your service! :tada:";
+        return ":disguised_face: *Personnel Integration Slack Application* at your service! :tada:";
     }
 
     protected String generateLastWeekSummary(String userId) {
