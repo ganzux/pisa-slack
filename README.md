@@ -73,12 +73,22 @@ PISA is your personnal assistant for HR interactions within SLACK!
 
 ### Built With
 
-* [Java](https://en.wikipedia.org/wiki/Java_(programming_language))
-* [SpringBoot](https://spring.io/projects/spring-boot)
-* [Slack](https://www.slack.com/)
-* [Slack Bolt](https://slack.dev/java-slack-sdk/): a foundational framework for Slack apps
-* [ngrock](https://ngrok.com/): ngrok provides a real-time web UI where you can introspect all HTTP traffic running over your tunnels. Replay any request against your tunnel with one click.
-* [Heroku](https://id.heroku.com/login): Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+* [Java](https://en.wikipedia.org/wiki/Java_(programming_language): Java is a high-level, class-based, object-oriented 
+programming language that is designed to have as few implementation dependencies as possible.
+
+* [SpringBoot](https://spring.io/projects/spring-boot): Spring Boot makes it easy to create stand-alone, 
+production-grade Spring based Applications that you can "just run".
+
+* [Slack](https://www.slack.com/): Slack is a new way to communicate with your team. It's faster, better organized, 
+and more secure than email.
+
+* [Slack Bolt](https://slack.dev/java-slack-sdk/): a foundational framework for Slack apps.
+
+* [ngrock](https://ngrok.com/): ngrok provides a real-time web UI where you can introspect all HTTP traffic running 
+over your tunnels. Replay any request against your tunnel with one click.
+
+* [Heroku](https://id.heroku.com/login): Heroku is a platform as a service (PaaS) that enables developers to build, 
+run, and operate applications entirely in the cloud.
 
 
 ### TODO List
@@ -90,7 +100,6 @@ PISA is your personnal assistant for HR interactions within SLACK!
 5. Refresh main screen after recording a TS
 6. Integrate with commands
 7. Default project - Last one used
-8.  
 
 <!-- GETTING STARTED -->
 ## Getting Started
