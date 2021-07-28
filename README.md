@@ -54,6 +54,7 @@ ganzux/pisa-slack
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -90,16 +91,20 @@ over your tunnels. Replay any request against your tunnel with one click.
 * [Heroku](https://id.heroku.com/login): Heroku is a platform as a service (PaaS) that enables developers to build, 
 run, and operate applications entirely in the cloud.
 
+![PISA design](docs/pisa.png)
 
 ### TODO List
 
 1. Decouple into a Data microservice and a services microservice
-2. Introduce Mappers for DTO/Data Objects
-3. Flyway for migrations in DB
-4. Default Dates in main screen
-5. Refresh main screen after recording a TS
-6. Integrate with commands
-7. Default project - Last one used
+2. TESTS!
+3. Introduce Mappers for DTO/Data Objects
+4. Flyway for migrations in DB
+5. Default Dates in main screen
+6. Refresh main screen after recording a TS
+7. Integrate with commands
+8. Default project - Last one used
+9. Translate
+10. ...
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -143,6 +148,14 @@ This is an example of how to list things you need to use the software and how to
 ![Events after](docs/2021-07-27_16-30-47.png)
 
 
+<!-- SCREENSHOTS -->
+## Screenshots
+
+![Mobile version](docs/mobile.png)
+
+![Pop Up!](docs/pop.png)
+
+![More info panel](docs/more_info.png)
 
 <!-- CONTRIBUTING -->
 ## Contributing
